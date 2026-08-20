@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dvoc0le4chqq1"]
+
+[ext_resource type="Texture2D" uid="uid://i1p5yfgrdky3" path="res://Assets/Temp-Placeholder/Weapons/Sword.png" id="1_7xwxv"]
+[ext_resource type="Script" uid="uid://c2au0j0pnj7ql" path="res://Scripts/Overworld/PlayerSquad.gd" id="1_m7ma7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ikq2a"]
+size = Vector2(28, 28)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=88060111]
+script = ExtResource("1_m7ma7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=341582089]
+shape = SubResource("RectangleShape2D_ikq2a")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=328136397]
+texture = ExtResource("1_7xwxv")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=677479861]
+path_desired_distance = 8.0
+target_desired_distance = 8.0

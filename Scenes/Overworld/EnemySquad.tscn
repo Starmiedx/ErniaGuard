@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://i564snslr7e7"]
+
+[ext_resource type="Texture2D" uid="uid://c0dxpmajulvnv" path="res://Assets/Temp-Placeholder/Weapons/Axe.png" id="1_2ulo5"]
+[ext_resource type="Script" uid="uid://cke51v4eurri6" path="res://Scripts/Overworld/EnemySquad.gd" id="2_xx4o8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8otn3"]
+size = Vector2(28, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ulo5"]
+size = Vector2(32, 32)
+
+[node name="EnemySquad" type="CharacterBody2D" unique_id=1725083744]
+script = ExtResource("2_xx4o8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1546551970]
+shape = SubResource("RectangleShape2D_8otn3")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=437361398]
+texture = ExtResource("1_2ulo5")
+flip_h = true
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=2039380717]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=245592709]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1540998587]
+shape = SubResource("RectangleShape2D_2ulo5")
