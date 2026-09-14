@@ -52,7 +52,9 @@ func move_to_next_patrol():
 	nav_agent.target_position = patrol_points[current_patrol_index]
 
 func _on_body_entered(body):
+	print("something entered: ", body.name)
 	if body is CharacterBody2D and body.name.begins_with("PlayerSquad"):
+		print("Battle triggering!")
 		GameState.active_enemy_id = enemy_id
 		call_deferred("_start_battle")
 
